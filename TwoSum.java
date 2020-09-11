@@ -18,7 +18,8 @@ public class CS245TwoSum {
 	public static int[] twoSum(int[] sumArr, int target) {
 		//Outer loop locks onto a single value
 		for (int i = 0; i < sumArr.length; i++) {
-			//Inner loop compares each value to i
+			//Inner loop compares each value to i (the locked value)
+			//After comparing each value to the locked value, i is incremented if no sums are found
 			for (int j = i + 1; j < sumArr.length; j++) {
 				//If the sum of two values is equal to our target, return a new array of the indices
 				if (sumArr[i] + sumArr[j] == target) {
